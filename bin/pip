@@ -1,4 +1,4 @@
-#!/Users/ever/DjangoProjects/ScrapyWorkspace/bin/python
+#!/home/evasqueza/Code/scrapper/bin/python3.4
 
 # -*- coding: utf-8 -*-
 import re

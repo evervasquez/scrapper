@@ -77,8 +77,8 @@ WSGI_APPLICATION = 'mappingsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'scraper',
-        'USER': 'ever',
+        'NAME': 'rucs',
+        'USER': 'user',
         'PASSWORD': 'secret',
         'HOST': '127.0.0.1',
         'PORT': '5432',
