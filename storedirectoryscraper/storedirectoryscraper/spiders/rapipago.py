@@ -16,13 +16,13 @@ class RucSpider(scrapy.Spider):
 
     def parse(self, response):
         yield scrapy.FormRequest.from_response(
-            response,
+            response=response,
             formdata={'nruc': self.ruc},
             callback=self.after_post
         )
 
     def after_post(self, response):
-        # self.logger.info('Parse function called on %s', response.url)
+        self.logger.info('Parse function called on %s', response.url)
         divs = response.css("div.list-group-item")
         count = 0
         for div in divs:
@@ -52,7 +52,9 @@ class RucSpider(scrapy.Spider):
         ruc_item['Distrito'] = self.response['Distrito']
         ruc_item['Estado'] = self.response['Estado']
         ruc_item['Ubigeo'] = self.response['Ubigeo']
+
         yield ruc_item
+
 
 def elimina_tildes(s):
     return ''.join((c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn'))
