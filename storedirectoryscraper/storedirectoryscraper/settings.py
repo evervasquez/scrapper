@@ -3,7 +3,7 @@ import sys
 import os
 import django
 
-sys.path.append('/Users/ever/DjangoProjects/ScrapyWorkspace/mappingsite')
+sys.path.append('/home/evasqueza/Code/scrapper/mappingsite')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mappingsite.settings")
 
 django.setup()
